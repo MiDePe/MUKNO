@@ -30,6 +30,7 @@ namespace gris
 
       public:
         void Render();
+		void resetCamera();
 
         void setInteractorStyle(vtkInteractorStyle* style);
         void setFocalPoint(const Vec3d& p);        

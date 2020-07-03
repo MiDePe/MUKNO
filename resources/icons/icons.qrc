@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>windows/Add.png</file>
+    <file>windows/Apply.png</file>
+    <file>windows/Delete.png</file>
+    <file>windows/Folder.png</file>
+    <file>windows/Go.png</file>
+    <file>windows/Hint.png</file>
+    <file>windows/Info.png</file>
+    <file>windows/OK.png</file>
+    <file>windows/Save.png</file>
+    <file>windows/Warning.png</file>
+    <file>windows/Yes.png</file>
+  </qresource>
+  <qresource prefix="mukno_icons">
+    <file>muk_icons/Gris_Logo_16_9b.png</file>
+  </qresource>
+</RCC>

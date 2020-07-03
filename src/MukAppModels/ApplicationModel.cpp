@@ -212,8 +212,8 @@ namespace gris
 		{
 			reset();
 			mpScene->load(filename);
-      mpScene->getPlanner()->initialize();
-      LOG_LINE << "Loaded scene " << filename;
+			mpScene->getPlanner()->initialize();
+			LOG_LINE << "Loaded scene " << filename;
 		}
 
 		/**
@@ -221,51 +221,51 @@ namespace gris
 		void ApplicationModel::savePath(const std::string& filename)
 		{
 			const auto& key  = mpModels->pPlanningModel->getActivePathCollection();
-      const int   idx  = mpModels->pPlanningModel->getActivePathIdx();
-      auto path = mpModels->pVisModel->getVisScene()->getPathCollection(key)->getMukPath(idx)->asMukPath();
+			const int   idx  = mpModels->pPlanningModel->getActivePathIdx();
+			auto path = mpModels->pVisModel->getVisScene()->getPathCollection(key)->getMukPath(idx)->asMukPath();
 			ofstream ofs(filename);
-      ofs << path.getRadius() << endl;
-      for (const auto& state : path.getStates())
-      {
-        ofs << state.coords << " " << state.tangent << endl;
-      }
+			ofs << path.getRadius() << endl;
+			for (const auto& state : path.getStates())
+			{
+				ofs << state.coords << " " << state.tangent << endl;
+			}
 		}
 
 		/**
 		*/
 		void ApplicationModel::loadPath(const std::string& filename)
 		{
-      const auto& key  = mpModels->pPlanningModel->getActivePathCollection();
-      mpModels->pPlanningModel->loadPath(key, filename);
+			const auto& key  = mpModels->pPlanningModel->getActivePathCollection();
+			mpModels->pPlanningModel->loadPath(key, filename);
 		}
     
-    /**
-    */
-    void ApplicationModel::setExecutableDir(const std::string & str)
-    {
-      mExecutableDir = str;
-    }
+		 /**
+		*/
+		void ApplicationModel::setExecutableDir(const std::string & str)
+		{
+		  mExecutableDir = str;
+		}
 
-    /**
-    */
-    const std::string& ApplicationModel::getExecutableDir() const
-    {
-      return mExecutableDir;
-    }
+		/**
+		*/
+		const std::string& ApplicationModel::getExecutableDir() const
+		{
+			return mExecutableDir;
+		}
 
-    /**
-    */
-    void ApplicationModel::setWorkingDir(const std::string & str)
-    {
-      mWorkingDir = str;
-    }
+		/**
+		*/
+		void ApplicationModel::setWorkingDir(const std::string & str)
+		{
+			mWorkingDir = str;
+		}
 
-    /**
-    */
-    const std::string& ApplicationModel::getWorkingDir() const
-    {
-      return mWorkingDir;
-    }
+		/**
+		*/
+		const std::string& ApplicationModel::getWorkingDir() const
+		{
+			return mWorkingDir;
+		}
 	}
 }
 

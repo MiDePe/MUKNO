@@ -20,12 +20,20 @@ set(Includes
 	${INC_DIR}/SafeApplication.h
 	${INC_DIR}/SafeProperties.h
 	${INC_DIR}/SelectionController.h
+	${INC_DIR}/SurgeonConfiguration.h
+	${INC_DIR}/SurgeonViewController.h
+	${INC_DIR}/SurgeonViewInputController.h
+	${INC_DIR}/SurgeonViewPlanningController.h
+	${INC_DIR}/SurgeonViewSegmentationController.h
+	${INC_DIR}/SurgeonViewSelectionController.h
+	${INC_DIR}/SurgeonViewNavigationController.h
 	${INC_DIR}/ThreadedController.h
 	${INC_DIR}/ToolBarController.h
 	${INC_DIR}/VisualizationController.h
 	)
 set(Includes_Private
 	${INC_DIR}private/DefaultInteraction3D.h
+	${INC_DIR}private/SurgeonInteraction3D.h
 	${INC_DIR}private/HandlerTextEditLog.h
 	${INC_DIR}private/IMukInteraction.h
 	${INC_DIR}private/muk.pch
@@ -54,11 +62,18 @@ set(Sources
 	SafeApplication.cpp
 	SafeProperties.cpp
 	SelectionController.cpp
+	SurgeonViewController.cpp
+	SurgeonViewInputController.cpp
+	SurgeonViewPlanningController.cpp
+	SurgeonViewSegmentationController.cpp
+	SurgeonViewSelectionController.cpp
+	SurgeonViewNavigationController.cpp
 	ToolBarController.cpp
 	VisualizationController.cpp
 
 	#private
 	DefaultInteraction3D.cpp
+	SurgeonInteraction3D.cpp
 	HandlerTextEditLog.cpp
 	IMukInteraction.cpp
 	MultiPortSphereRegionInteraction.cpp

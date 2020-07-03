@@ -23,6 +23,7 @@ namespace gris
       signals:
         // when the planningChanged in a significant manner this is send to SelectionController
         void planningChanged();
+		void pathsCreated();
 
       public:
         void changePathCollection(const std::string& key);

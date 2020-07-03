@@ -95,14 +95,14 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 	${INC_DIR}
 	${EIGEN_INCLUDE_DIR}
 	${GMP_INCLUDE_DIR}
-	${OMPL_INCLUDE_DIRS}
+	${OMPL_INCLUDE_DIR}
 	)
 	
 target_link_libraries(${PROJECT_NAME}
 	gstd
 	MukCommon
 	${CGAL_LIBRARIES}
-	${OMPL_LIBRARIES}
+	ompl.lib
 	${BOOST_TARGETS}
 	)
 	

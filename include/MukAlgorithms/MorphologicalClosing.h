@@ -5,7 +5,8 @@ namespace gris
 {
   namespace muk
   {
-    /** \brief Creates a binary/Segmentation image by thresholding at a lower and/or upper limit.
+    /** \brief Creates a binary/
+	image by thresholding at a lower and/or upper limit.
     */
     class MUK_ALGO_API MorphologicalClosing : public ItkImageToImageWrapper<ImageInt3D, ImageInt3D>
     {

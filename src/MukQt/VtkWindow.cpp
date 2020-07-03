@@ -121,6 +121,11 @@ namespace muk
     mpRenderWindow->Render();
   }
 
+  void VtkWindow::resetCamera()
+  {
+	  mpRenderer->ResetCamera();
+  }
+
   /**
   */
   void VtkWindow::setFocalPoint(const Vec3d& p)

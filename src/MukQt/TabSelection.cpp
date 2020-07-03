@@ -441,7 +441,7 @@ namespace muk
       mpLayoutLarge->addWidget(label, 10, 57, 2, 2);
 
       mpSelectedPath = new QSpinBox(this);
-      mpSelectedPath->setMinimum(-1);
+      mpSelectedPath->setMinimum(0);
       mpSelectedPath->setMaximum(std::numeric_limits<int>::max());
       connect(mpSelectedPath, SELECT<int>::OVERLOAD_OF(&QSpinBox::valueChanged), [&](int i) { emit this->singlePathSelectionChanged(i); });
       mpLayoutSmall->addWidget(mpSelectedPath, 20, 9, 1, 3);

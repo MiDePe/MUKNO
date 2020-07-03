@@ -331,6 +331,7 @@ namespace muk
     }
     mpModels->pVisModel->render();
     emit this->planningChanged();
+	emit pathsCreated();
   }
 
   /** \brief Reconfigures the Planning Model and tries to computes as many paths as possible in the available time
@@ -374,6 +375,7 @@ namespace muk
     }
     mpModels->pVisModel->render();
     emit this->planningChanged();
+	emit pathsCreated();
   }
   
   /**

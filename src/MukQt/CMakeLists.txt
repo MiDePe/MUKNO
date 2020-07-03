@@ -26,11 +26,19 @@ set(Includes
 	${INC_DIR}/QuickPlanningConfigurationWindow.h
 	${INC_DIR}/SphereInteraction.h
 	${INC_DIR}/SceneWidget.h
+	${INC_DIR}/SurgeonView.h
+	${INC_DIR}/SurgeonViewInput.h
+	${INC_DIR}/SurgeonViewPlanning.h
+	${INC_DIR}/SurgeonViewProperties.h
+	${INC_DIR}/SurgeonViewSegmentation.h
+	${INC_DIR}/SurgeonViewSelection.h
+	${INC_DIR}/SurgeonViewNavigation.h
 	${INC_DIR}/SliceWidget.h
 	${INC_DIR}/TabImaging.h
 	${INC_DIR}/TabNavigation.h
 	${INC_DIR}/TabPlanning.h
 	${INC_DIR}/TabSelection.h
+	${INC_DIR}/ToolbarSurgeonModel.h
 	${INC_DIR}/VolumeWidget.h
 	${INC_DIR}/VtkWindow.h
 	)
@@ -73,10 +81,18 @@ set(Sources
 	SceneWidget.cpp
 	SliceWidget.cpp
 	SphereInteraction.cpp
+	SurgeonView.cpp
+	SurgeonViewInput.cpp
+	SurgeonViewPlanning.cpp
+	SurgeonViewProperties.cpp
+	SurgeonViewSegmentation.cpp
+	SurgeonViewSelection.cpp
+	SurgeonViewNavigation.cpp
 	TabImaging.cpp
 	TabNavigation.cpp
 	TabPlanning.cpp
 	TabSelection.cpp
+	ToolbarSurgeonModel.cpp
 	VtkWindow.cpp
 	)
   
@@ -97,7 +113,7 @@ add_library(${PROJECT_NAME} SHARED
 	${Includes}
 	${Sources}
 	${Resources}
-	${Files}	
+${Files}	
 	)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -119,10 +135,10 @@ target_link_libraries(${PROJECT_NAME}
 	MukCommon
 	MukPathPlanning
 	MukVisualization
-	QCustomPlot
-	${VTK_LIBRARIES}
 	${BOOST_TARGETS}
+	${VTK_LIBRARIES}
 	${Muk_Qt_Modules}
+	QCustomPlot
 	)
 	
 source_group("Header Files\\private" FILES
@@ -141,4 +157,4 @@ gris_deploy(${PROJECT_NAME} "${MuknoII_BIN_DIR}" "")
 
 #gris_deploy_directories(${PROJECT_NAME} "${MuknoII_Resources_DIR}/icons" "${CMAKE_SOURCE_DIR}/resources/icons")
 
-#gris_deploy_files(${PROJECT_NAME} "${MuknoII_BIN_DIR}/platforms" "${QT_DIR}/plugins/platforms/qwindows.dll")
+gris_deploy_files(${PROJECT_NAME} "${MuknoII_BIN_DIR}/platforms" "${QT_DIR}/plugins/platforms/qwindows.dll")

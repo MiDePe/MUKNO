@@ -88,14 +88,14 @@ namespace
     if (P_e.x() > P_x.x())
       return acos(abs(T.x()));
     else      
-      return M_PI - acos(abs(T.x()));
+      return M_Pi - acos(abs(T.x()));
   }
 
   /**
   */
   double computeGamma(const Vec3d& P1, const Vec3d& P2, const Vec3d& P3)
   {
-    return M_PI - wideAngle(P1-P2, P3-P2);
+    return M_Pi - wideAngle(P1-P2, P3-P2);
   }
   
   /** \brief approximation of constant c_4 on page 768, used in eq. (4)

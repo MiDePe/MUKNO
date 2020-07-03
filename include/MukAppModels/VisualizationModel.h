@@ -98,6 +98,11 @@ namespace gris
         void focus();
         void focusOnWaypoint();
         void render();
+		void reset3DWindow();
+
+		Vec3d findCenterOfMass(vtkPolyData* data);
+		void focus3dWindowOnCenter();
+		void focus3dWindowOnObstacle(std::string obstacleName);
         //
         friend class VisualizationModelLegacyIO;
         void save(const std::string& filename) const;
@@ -109,7 +114,7 @@ namespace gris
         const CameraConfiguration& getCameraConfiguration() const;        
                 
       private:
-        MedicalMultiViewWidget*       mpVisWindow;
+        MedicalMultiViewWidget*    mpVisWindow;
         std::shared_ptr<MukScene>  mpScene;
         std::unique_ptr<VisScene>  mpVisScene;
 

@@ -35,6 +35,8 @@
 #include "gstd/XmlDocument.h"
 #include "gstd/XmlNode.h"
 
+#include "vtkCenterOfMass.h"
+
 #include <boost/filesystem.hpp>
 #include <boost/format.hpp>
 
@@ -357,6 +359,42 @@ namespace muk
     gris::XmlDocument::save(fn.string().c_str(), *pDoc);
   }
 
+  void VisualizationModel::reset3DWindow()
+  {
+	  mpVisWindow->get3DWindow()->resetCamera();
+  }
+
+  Vec3d VisualizationModel::findCenterOfMass(vtkPolyData* data)
+  {
+	  vtkSmartPointer<vtkCenterOfMass> centerOfMassFilter = vtkSmartPointer<vtkCenterOfMass>::New();
+	  centerOfMassFilter->SetInputData(data);
+	  centerOfMassFilter->SetUseScalarsAsWeights(false);
+	  centerOfMassFilter->Update();
+
+	  const double * center = centerOfMassFilter->GetCenter();
+	  Vec3d result = Vec3d(center);
+	  return result;
+  }
+
+  void VisualizationModel::focus3dWindowOnCenter()
+  {
+	  std::shared_ptr<MukObstacle> obstacle = mpScene->getObstacles().at(0);
+	  vtkSmartPointer<vtkPolyData> data = obstacle->getData();
+	  if (mpScene->getObstacleKeys().empty()) return;
+
+	  mpVisWindow->get3DWindow()->setFocalPoint(findCenterOfMass(data));
+  }
+
+
+  void VisualizationModel::focus3dWindowOnObstacle(std::string obstacleName)
+  {
+	  std::shared_ptr<MukObstacle> obstacle = mpScene->getObstacle(obstacleName);
+	  vtkSmartPointer<vtkPolyData> data = obstacle->getData();
+	  if (mpScene->getObstacleKeys().empty()) return;
+
+	  mpVisWindow->get3DWindow()->setFocalPoint(findCenterOfMass(data));
+  }
+
 	/** \brief Focuses on DefaultView, if not available tries to focus on an obstacle or on a ProblemDefinition. Else focuses on (0,0,0).
       
   */
@@ -371,11 +409,12 @@ namespace muk
       auto keys = mpScene->getObstacleKeys();
       if (!keys.empty())
       {
-        auto pObj = mpScene->getObstacle(keys.front());
+       /* auto pObj = mpScene->getObstacle(keys.front());
         double pd[6];
         pObj->getData()->GetBounds(pd);
-        mpVisWindow->get3DWindow()->setFocalPoint(0.5*Vec3d(pd[0]+pd[1], pd[2]+pd[3], pd[4]+pd[5]));
-			}
+        mpVisWindow->get3DWindow()->setFocalPoint(0.5*Vec3d(pd[0]+pd[1], pd[2]+pd[3], pd[4]+pd[5]));*/
+		focus3dWindowOnCenter();
+	  }
       else
       {
         keys = mpScene->getPathKeys();

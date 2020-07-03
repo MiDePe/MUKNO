@@ -337,9 +337,9 @@ namespace muk
   */
   void PlanningModel::insertPathCollection(const std::string& name)
   {
-    if (mpScene->hasPathKey(name))
-      throw MUK_EXCEPTION("Key already exists", name.c_str());
-    mpScene->insertPathCollection(name);
+	if (mpScene->hasPathKey(name))
+		throw MUK_EXCEPTION("Key already exists", name.c_str());
+	mpScene->insertPathCollection(name);
   }
 
   /** \brief Adds a new path collection using the reference collection's goal regions and a new #MukStateRegion based on the respective path and state indices.

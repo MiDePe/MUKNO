@@ -15,6 +15,8 @@ namespace gris
     */
     class ProblemDefinitionController : public BaseController
     {
+		Q_OBJECT
+
       public:
         virtual void initialize();
         void setupConnections();
@@ -40,6 +42,11 @@ namespace gris
         
         // visualization
         void showProblemDefinitionOnly(const std::string& name);
+
+
+	signals:
+		void startRegionAdded();
+		void goalRegionAdded();
 
       private:
         void loadRegion(VisStateRegion& region);

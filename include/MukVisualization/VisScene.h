@@ -49,6 +49,7 @@ namespace gris
         std::vector<std::string> getAbstractObjectKeys() const;
         std::vector<std::string> getPathCollectionKeys() const;
         std::vector<std::string> getObstacleKeys() const;
+		std::vector<std::shared_ptr<VisObstacle>> getObstacles() const;
 
         void save(const std::string& filename) const;
         void load(const std::string& filename);

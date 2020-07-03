@@ -177,7 +177,15 @@ namespace muk
     mpControls->mpPropControl->showProperty(EnPropertyType::enAlgorithm, pObj);
   }
 
-  /** \brief show the output of the selected port
+  /** \brief Show the output of the selected port.
+
+	The function will extract the display type of the clicked algorithm and will upon this decide, 
+	what kind of visualization (mesh, volume image, overlay, etc..) is added to the view model.
+
+  
+	\param algiId: ID of the clicked AlgorithmWrapper
+	\param isOutout: flag that indicates weather an input or an output port of an algorithm was clicked
+	\param portId: ID of the respective algorithm's input or output port.
   */
   void AlgorithmController::showOutput(unsigned int algoId, bool isOutput, unsigned int portId) 
   {

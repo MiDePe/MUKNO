@@ -1,5 +1,6 @@
 #include "private/muk.pch"
 #include "private/DefaultInteraction3D.h"
+#include "private/SurgeonInteraction3D.h"
 #include "private/MultiPortSphereRegionInteraction.h"
 #include "private/PlaneRegionInteraction.h"
 #include "private/SphereRegionInteraction.h"
@@ -83,7 +84,19 @@ namespace muk
       pObj->initialize();
       mpWindow->setInteractorStyle(pObj);
       mpInteractorStyle = pObj;
-    }
+    } 
+	else if (key == "surgeon")
+	{
+		mpControls->mpPropControl->reloadProperty();
+		auto pObj = make_vtk<SurgeonInteraction3D>();
+		pObj->setModels(mpModels);
+		pObj->setControllers(mpControls);
+		pObj->setMainWindow(mpMainWindow);
+		pObj->setRenderer(mpWindow->getRenderer());
+		pObj->initialize();
+		mpWindow->setInteractorStyle(pObj);
+		mpInteractorStyle = pObj;
+	}
     else if (key == "cutOutObstacle")
 
     {

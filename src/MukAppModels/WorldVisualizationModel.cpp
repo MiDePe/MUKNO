@@ -84,6 +84,7 @@ namespace muk
     mp->mp3DWindow = pWidget;
   }
 
+
   /**
   */
   void WorldVisualizationModel::setCtImage(vtkImageData* pImage)
@@ -107,7 +108,17 @@ namespace muk
     mp->mpSagittalGroup->getRenderWindow()->Render();
     mp->mpCoronalGroup->getRenderWindow()->Render();
     mp->mp3DWindow->Render();
+
   }
+
+  void WorldVisualizationModel::showSegmentation()
+  {
+	  mp->mpAxialGroup->showSegmentation(true);
+	  mp->mpSagittalGroup->showSegmentation(true);
+	  mp->mpCoronalGroup->showSegmentation(true);
+	  render();
+  }
+
 
   /**
   */

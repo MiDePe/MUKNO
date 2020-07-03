@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Mukno>
+	<version>0.6.0.0</version>
+	<SurgeryPlanning>
+		<MukScene>
+			<SceneName />
+			<Obstacles />	
+			<PathCollections />
+		</MukScene>
+		<Configuration>
+			<Planning>
+				<Planner>
+					<Type>ManualPlanner</Type>
+					<Calc-Time>0.25</Calc-Time>
+					<Step-Size>2</Step-Size>
+					<Verbose>0</Verbose>
+				</Planner>
+				<Pruner>
+					<Type>Yang-Spiral-Pruner</Type>
+					<MaxStepSize>0.000000</MaxStepSize>
+					<MaxDistance>0.000000</MaxDistance>
+				</Pruner>
+				<Interpolator>
+					<Type>Linear-Interpolator</Type>
+					<InterpolationType>resolution</InterpolationType>
+					<PointsPerSegment>5</PointsPerSegment>
+					<Resolution>0.100000</Resolution>
+				</Interpolator>
+			</Planning>
+			<Visualization>
+				<Camera>
+					<FocalPoint>0 0 0</FocalPoint>
+					<Position>0 0 1</Position>
+					<ViewUp>0 1 0</ViewUp>
+				</Camera>
+			</Visualization>
+		</Configuration>
+	</SurgeryPlanning>
+</Mukno>

@@ -25,8 +25,8 @@ namespace gris
         virtual void initialize() {}
 
       protected:
-        AppControllers* mpControls;
-        AppModels* mpModels;
+        AppControllers*			mpControls;
+        AppModels*				mpModels;
         MuknoPlannerMainWindow* mpMainWindow;
     };
   }

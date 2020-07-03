@@ -37,7 +37,7 @@ namespace muk
       mpTrafo->UpdateLargestPossibleRegion();
       mpCubes = make_vtk<vtkMarchingCubes>();
       mpCubes->SetNumberOfContours(1);
-      mpCubes->SetValue(0, mSurfaceValue);
+      mpCubes->SetValue(mSurfaceValue, mSurfaceValue);
       mpCubes->SetInputData(mpTrafo->GetOutput());
       mpCubes->Update();
 

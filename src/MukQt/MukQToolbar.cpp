@@ -22,7 +22,9 @@ namespace
     enLoadCTFiles,
     enSetWaypointFocus,
     enLoadSegmentationsCt,
-    Size_EnActions
+	enTrail,
+	enSwitchView,
+	EnActionsSize
   };
 }
 
@@ -38,7 +40,7 @@ namespace gris
       setObjectName(QStringLiteral("toolbar"));
       setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-      for (int i(0); i<Size_EnActions; ++i)
+      for (int i(0); i< EnActionsSize; ++i)
       {
         addAction(new QAction(this));
       }
@@ -120,13 +122,31 @@ namespace gris
 		  nextAction->setIcon(icon);
 	  }
 	  nextAction = actions()[enLoadSegmentationsCt];
-	  nextAction->setObjectName("actionLoadSegmentationsCt");
-	  nextAction->setText("Load Segmentation");
-	  nextAction->setToolTip("Breaks down a single segmentation file into multiple segmentations and loads these into the ct viewer");
-	  QIcon icon;
-	  icon.addFile("../resources/icons/windows/Folder.png", QSize(), QIcon::Normal, QIcon::Off);
-	  nextAction->setIcon(icon);
-
+	  {
+		  nextAction->setObjectName("actionLoadSegmentationsCt");
+		  nextAction->setText("Load Segmentation");
+		  nextAction->setToolTip("Breaks down a single segmentation file into multiple segmentations and loads these into the ct viewer");
+		  QIcon icon;
+		  icon.addFile("../resources/icons/windows/Folder.png", QSize(), QIcon::Normal, QIcon::Off);
+		  nextAction->setIcon(icon);
+	  }	  
+	  nextAction = actions()[enTrail];
+	  {
+		  nextAction->setObjectName("actionTrail");
+		  nextAction->setText("START TRAIL");
+		  QIcon icon;
+		  icon.addFile("../resources/icons/muk_icons/Trail.png", QSize(), QIcon::Normal, QIcon::Off);
+		  nextAction->setIcon(icon);
+	  }
+	  nextAction = actions()[enSwitchView];	
+	  
+		  nextAction->setObjectName("actionSwitchView");
+		  nextAction->setText("Switch View");
+		  nextAction->setToolTip("Switches into surgeons view.");
+		  QIcon icon;
+		  icon.addFile("../resources/icons/windows/Refresh.png", QSize(), QIcon::Normal, QIcon::Off);
+		  nextAction->setIcon(icon);
+	  
     }
 
     /**
@@ -135,7 +155,7 @@ namespace gris
     {
     }
 
-    /**
+    /** connects click-events in GUI to the functions below
     */
     void MukQToolBar::setupConnections()
     {
@@ -145,9 +165,11 @@ namespace gris
       connect(actions()[enLoadFiles], &QAction::triggered, this, &MukQToolBar::actionLoadFiles);
       connect(actions()[enSetFocus],  &QAction::triggered, this, &MukQToolBar::actionSetFocus);
       connect(actions()[enPathAnalysis], &QAction::triggered, this, &MukQToolBar::actionComputePathAnalysis);
-	    connect(actions()[enLoadCTFiles], &QAction::triggered, this, &MukQToolBar::actionLoadCTFiles);
-	    connect(actions()[enSetWaypointFocus], &QAction::triggered, this, &MukQToolBar::actionSetWaypointFocus);
-	    connect(actions()[enLoadSegmentationsCt], &QAction::triggered, this, &MukQToolBar::actionLoadSegmentationsCt);
+	  connect(actions()[enLoadCTFiles], &QAction::triggered, this, &MukQToolBar::actionLoadCTFiles);
+	  connect(actions()[enSetWaypointFocus], &QAction::triggered, this, &MukQToolBar::actionSetWaypointFocus);
+	  connect(actions()[enLoadSegmentationsCt], &QAction::triggered, this, &MukQToolBar::actionLoadSegmentationsCt);
+	  connect(actions()[enTrail], &QAction::triggered, this, &MukQToolBar::actionTrail);;
+	  connect(actions()[enSwitchView], &QAction::triggered, this, &MukQToolBar::actionSwitchView);
     }
     
     /**
@@ -156,6 +178,20 @@ namespace gris
     {
       emit createNewSceneClicked();
     }
+
+	void MukQToolBar::actionTrail() 
+	{
+		if (actions()[enTrail]->text() == "START TRAIL")
+		{
+			emit trailOldStarted();
+			actions()[enTrail]->setText("END TRAIL");
+		}
+		else
+		{
+			emit trailOldEnded();
+			actions()[enTrail]->setText("START TRAIL");
+		}		
+	}
 
     /**
     */
@@ -235,6 +271,12 @@ namespace gris
 		if (qFilename.isEmpty())
 			return;
 		emit loadSegmentationFileClicked(qFilename.toLocal8Bit().constData());
+	}
+
+
+	void MukQToolBar::actionSwitchView()
+	{
+		emit switchViewClicked();  //connected to MuknoPlanner::ToolbarController
 	}
 
   }

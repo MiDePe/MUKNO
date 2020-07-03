@@ -91,7 +91,7 @@ namespace gris
           double angle = std::acos(std::abs(center.tangent.z()));
           if (center.tangent.z() < 0)
           {
-            angle = M_PI - angle;
+            angle = M_Pi - angle;
           }
           auto axis = cast(crossproduct);
           axis.normalize();

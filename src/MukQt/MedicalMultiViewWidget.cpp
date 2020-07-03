@@ -46,12 +46,13 @@ namespace muk
     void toggleFullScreen3D(EnQtViewPort enPort);
     void takeScreenShot(EnQtViewPort enPort);
 
+
     QGridLayout*  mpLayout;
     VolumeWidget  m3DWindow;
 
     std::array<SliceWidget*,3>                         mSliceWidgets;
-    //std::array<vtkSmartPointer<ROIWidget>,3>           mRois;
-    //vtkSmartPointer<ROISynchronizer>                   mpRoiSync;
+    //std::array<vtkSmartPointer<ROIWidget>,3>         mRois;
+    //vtkSmartPointer<ROISynchronizer>                 mpRoiSync;
     vtkSmartPointer<Cursor3DSynchronizer>              mpCursorSync;
     vtkSmartPointer<vtkRenderWindowInteractor>         m3DInteractor;
 
@@ -117,9 +118,9 @@ namespace muk
       // enforce default grid layout
       mIsFullScreen = false;
       m3DWindow.hide(false);
-      mSliceWidgets[0]->   hide(false);
+      mSliceWidgets[0]->hide(false);
       mSliceWidgets[1]->hide(false);
-      mSliceWidgets[2]-> hide(false);
+      mSliceWidgets[2]->hide(false);
     }
     else
     {
@@ -145,6 +146,8 @@ namespace muk
       m3DWindow.takeScreenShot();
     }
   }
+
+
 
   // =========================================================================================================
   
@@ -183,12 +186,15 @@ namespace muk
     return mp->m3DWindow.getVtkWindow();
   }
 
+
+
   /**
   */
   const VtkWindow* MedicalMultiViewWidget::get3DWindow() const 
   {
     return mp->m3DWindow.getVtkWindow();
   }
+
 
   /**
   */

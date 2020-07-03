@@ -58,6 +58,16 @@ namespace muk
     }
   }
 
+  bool ProblemDefinitionModel::hasStartRegion()
+  {
+	  return mpVisColl->hasStartRegions();
+  } 
+  
+  bool ProblemDefinitionModel::hasGoalRegion()
+ {
+	  return mpVisColl->hasGoalRegions();
+ }
+
   /** \brief adds the specified start region to the problem definition
   */
   bool ProblemDefinitionModel::addStartRegion()

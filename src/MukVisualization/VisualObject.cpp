@@ -161,6 +161,7 @@ namespace gris
       mpMapper->Modified();
     }
 
+
     /**
     */
     void VisualObject::setColors(const std::vector<Vec3d>& colors)

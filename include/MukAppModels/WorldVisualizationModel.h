@@ -31,13 +31,15 @@ namespace gris
         void initialize();
         void render();
 
+		void showSegmentation();
+
         // image and widget stuff
       public:
         void setAxialSliceWidget(SliceWidget* pWidget);
         void setSagittalSliceWidget(SliceWidget* pWidget);
         void setCoronalSliceWidget(SliceWidget* pWidget);
         void set3DWindow(VtkWindow* pWidget);
-
+		
         void setCtImage(vtkImageData* pImage);
         void setSegmentationImage(vtkImageData* pImage);
 

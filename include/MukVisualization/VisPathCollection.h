@@ -32,6 +32,9 @@ namespace gris
         VisStateRegion& getGoalRegion (size_t i) const;
         //VisStateRegion& getWaypoint   (size_t i) const;
 
+		bool hasStartRegions() const { return !mStartRegions.empty(); }
+		bool hasGoalRegions() const { return !mGoalRegions.empty(); }
+
         std::vector<std::shared_ptr<VisStateRegion>> getStartRegions() const { return mStartRegions; }
         std::vector<std::shared_ptr<VisStateRegion>> getGoalRegions()  const { return mGoalRegions; }
         //std::vector<std::shared_ptr<VisStateRegion>> getWaypoints   () const;

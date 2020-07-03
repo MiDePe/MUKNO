@@ -26,12 +26,15 @@ namespace gris
         void saveSceneClicked(const char* filename);
         void loadSceneClicked(const char* filename);
         void loadObstacleFileClicked(const std::string& filename);
-		    void loadCTFileClicked(const std::string& filename);
-		    void loadSegmentationFileClicked(const std::string& filename);
+		void loadCTFileClicked(const std::string& filename);
+		void loadSegmentationFileClicked(const std::string& filename);
         //void loadFiles(size_t n, const char** filenames);
         void focusClicked();
-		    void focusOnWaypointClicked();
+		void focusOnWaypointClicked();
         void pathAnalysisRequested();
+		void switchViewClicked();
+		void trailOldStarted();
+		void trailOldEnded();
 
       private slots:
         void actionCreateNewScene();
@@ -40,10 +43,11 @@ namespace gris
         void actionLoadFiles();
         void actionSetFocus();
         void actionComputePathAnalysis();
-		    void actionLoadCTFiles();
-		    void actionSetWaypointFocus();
-		    void actionLoadSegmentationsCt();
-
+	    void actionLoadCTFiles();
+	    void actionSetWaypointFocus();
+	    void actionLoadSegmentationsCt();
+		void actionSwitchView();
+		void actionTrail();
       private:
         std::string mLastSceneDir;
     };

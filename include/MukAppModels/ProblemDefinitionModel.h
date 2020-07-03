@@ -18,14 +18,14 @@ namespace gris
     /** \brief Handles the insertion of start and goal regions
     */
     class MUK_APP_API ProblemDefinitionModel : public BaseModel
-    {
+	{
       public:
         ProblemDefinitionModel();
 
-      public:
-        virtual const char* name() const { return "ProblemDefinitionModel"; }
+
 
       public:
+        virtual const char* name() const { return "ProblemDefinitionModel"; }
         void setScene(std::shared_ptr<MukScene> pScene) { mpScene = pScene; }
         
         void unloadAll();
@@ -38,10 +38,13 @@ namespace gris
 
         bool addStartRegion();
         bool addGoalRegion();
+		bool hasStartRegion();
+		bool hasGoalRegion();
         bool addStartRegion(std::unique_ptr<VisStateRegion> pObj);
         bool addGoalRegion(std::unique_ptr<VisStateRegion> pObj);
         bool deleteRegion(MukProblemDefinition::EnRegionType en, int index);
         void reverseRegions();
+
 
       private:
         std::shared_ptr<MukScene> mpScene;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseController.h"
+#include <QElapsedTimer>
 
 namespace gris
 {
@@ -36,7 +37,23 @@ namespace gris
         void loadObstacleFromFile(const std::string& filename);
         void saveScene(const std::string& filename);
 
+		void switchToSurgeonsView();
+		void switchToDeveloperView();
+
+		void surgeonViewSwitchToInputWidget();
+		void surgeonViewSwitchToSegmentationWidget();
+		void surgeonViewSwitchToPlanningWidget();
+		void surgeonViewSwitchToSelectionWidget();
+		void surgeonViewSwitchToNavigationWidget();
+
+		void startTrail();
+		void endTrailOldGUI();
+		void endTrailNewGUI();
+		void endTrail(QString guiVersion);
+
       private:
+		  QElapsedTimer trailTimer;
+		
     };
   }
 }

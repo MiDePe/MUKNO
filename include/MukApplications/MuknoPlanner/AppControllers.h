@@ -19,6 +19,11 @@ namespace gris
     class SelectionController;
     class ToolBarController;
     class VisualizationController;
+	class SurgeonViewInputController;
+	class SurgeonViewSegmentationController;
+	class SurgeonViewPlanningController;
+	class SurgeonViewSelectionController;
+	class SurgeonViewNavigationController;
 
 
     /**
@@ -33,16 +38,21 @@ namespace gris
       void setupConnections();
       void initialize();
 
-      std::unique_ptr<AlgorithmController>	 mpAlgorithmController;
-      std::unique_ptr<InteractionController> mpInteract;
-      std::unique_ptr<MenuBarController>     mpMenuBarController;
-      std::unique_ptr<NavigationThread>      mpNaviThread;
-      std::unique_ptr<PlanningController>    mpPlanningController;
-      std::unique_ptr<ProblemDefinitionController> mpProbDefControl;
-      std::unique_ptr<PropertyController>    mpPropControl;
-      std::unique_ptr<SelectionController>   mpSelectControl;
-      std::unique_ptr<ToolBarController>     mpToolbar;
-      std::unique_ptr<VisualizationController> mpVisControl;
+      std::unique_ptr<AlgorithmController>					mpAlgorithmController;
+      std::unique_ptr<InteractionController>				mpInteract;
+      std::unique_ptr<MenuBarController>					mpMenuBarController;
+      std::unique_ptr<NavigationThread>						mpNaviThread;
+      std::unique_ptr<PlanningController>					mpPlanningController;
+      std::unique_ptr<ProblemDefinitionController>			mpProbDefControl;
+      std::unique_ptr<PropertyController>					mpPropControl;
+      std::unique_ptr<SelectionController>					mpSelectControl;
+      std::unique_ptr<ToolBarController>					mpToolbar;
+      std::unique_ptr<VisualizationController>				mpVisControl;
+	  std::unique_ptr<SurgeonViewInputController>			mpSVInputControl;
+	  std::unique_ptr<SurgeonViewSegmentationController>	mpSVSegmentationControl;
+	  std::unique_ptr<SurgeonViewPlanningController>		mpSVPlanningControl;
+	  std::unique_ptr<SurgeonViewSelectionController>		mpSVSelectionControl;
+	  std::unique_ptr<SurgeonViewNavigationController>		mpSVNavigationControl;
     };
   }
 }

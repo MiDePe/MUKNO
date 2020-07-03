@@ -177,6 +177,7 @@ namespace muk
       mpMainWindow->mpTabPlanning->mpProbDefWidget->setSelection(MukProblemDefinition::enStart, N-1);
       mpModels->pVisModel->render();
       selectVisRegion();
+	  emit startRegionAdded();
     }
   }
 
@@ -197,6 +198,7 @@ namespace muk
       addStartRegion(std::move(pVis));
       mpMainWindow->mpTabPlanning->mpProbDefWidget->setSelection(MukProblemDefinition::enNone, -1);
       mpControls->mpInteract->setDefaultInteraction();
+	  emit startRegionAdded();
     }
   }
 
@@ -214,6 +216,7 @@ namespace muk
       mpMainWindow->mpTabPlanning->mpProbDefWidget->setSelection(MukProblemDefinition::enGoal, N-1);
       mpModels->pVisModel->render();
       selectVisRegion();
+	  emit goalRegionAdded();
     }
   }
 
@@ -234,7 +237,8 @@ namespace muk
       pVis->representation()->setSphereRadius(pInput->getRadius());
       addGoalRegion(std::move(pVis));
       mpMainWindow->mpTabPlanning->mpProbDefWidget->setSelection(MukProblemDefinition::enNone, -1);
-      mpControls->mpInteract->setDefaultInteraction();
+      mpControls->mpInteract->setDefaultInteraction(); 
+	  emit goalRegionAdded();
     }
   }
 
@@ -249,7 +253,7 @@ namespace muk
       const auto& key = mpModels->pPlanningModel->getActivePathCollection();
       const auto  N   = mpModels->pVisModel->getVisScene()->getPathCollection(key)->sizeStart();
       mpMainWindow->mpTabPlanning->mpProbDefWidget->setSelection(MukProblemDefinition::enStart, N-1);
-      mpModels->pVisModel->render();
+	  mpModels->pVisModel->render();
     }
   }
 

@@ -7,7 +7,7 @@
 #include "VisAbstractObject.h"
 #include "IVisRobot.h"
 
-#include "MukCommon\MukScene.h"
+#include "MukCommon/MukScene.h"
 #include "MukCommon/MukStringToolkit.h"
 #include "MukCommon/MukException.h"
 
@@ -234,6 +234,11 @@ namespace muk
       keys.push_back(pObj->getName());
     }
     return keys;
+  }
+
+  std::vector<std::shared_ptr<VisObstacle>> VisScene::getObstacles() const
+  {
+	  return mObstacles;
   }
 
   /** \brief requires an already existing Xml-File created by MukScene->save(...)

@@ -12,52 +12,52 @@
 
 namespace gris
 {
-  namespace muk
-  {
-    // gui classes
-    class HandlerTextEditLog;
-    class QtLogWrapper;   
+	namespace muk
+	{
+		// gui classes
+		class HandlerTextEditLog;
+		class QtLogWrapper;
 
-    /**
-    */
-    class MuknoPlanner : public QMainWindow
-    {
-      Q_OBJECT
+		/**
+		*/
+		class MuknoPlanner : public QMainWindow
+		{
+			Q_OBJECT
 
-      public:
-        static std::unique_ptr<MuknoPlanner> create(const std::string& exe);
+		public:
+			static std::unique_ptr<MuknoPlanner> create(const std::string& exe);
 
-      public:
-        ~MuknoPlanner();
-        
-      private:
-        MuknoPlanner();
-        MuknoPlanner(const MuknoPlanner& o) = delete;
-        MuknoPlanner& operator=(const MuknoPlanner& o) = delete;
+		public:
+			~MuknoPlanner();
 
-      public:
-        virtual void closeEvent (QCloseEvent *event);
+		private:
+			MuknoPlanner();
+			MuknoPlanner(const MuknoPlanner& o) = delete;
+			MuknoPlanner& operator=(const MuknoPlanner& o) = delete;
 
-      public:
-        void showInStartUpMode();
-        void setupConnections();
-        void handleFileInput(const std::string& filename);
+		public:
+			virtual void closeEvent(QCloseEvent *event);
 
-      private:
-        void init(const std::string& exePath);
-        void writePropertyFile() const;
+		public:
+			void showInStartUpMode();
+			void setupConnections();
+			void handleFileInput(const std::string& filename);
 
-      private:
-        // base structure
-        std::unique_ptr<AppModels> mpModels;
-        std::unique_ptr<AppControllers> mpControls;
-        // owns gui
-        std::unique_ptr<MuknoPlannerMainWindow>   mpMasterWindow;
-        
-        // Handlers of the different layouts/Widgets        
-        std::unique_ptr<HandlerTextEditLog>       mpHandlerLog;
-        std::unique_ptr<QtLogWrapper>             mpWrapperLog;
-    };
+		private:
+			void init(const std::string& exePath);
+			void writePropertyFile() const;
 
-  }
+		private:
+			// base structure
+			std::unique_ptr<AppModels>			    	mpModels;
+			std::unique_ptr<AppControllers>				mpControls;
+			// owns gui
+			std::unique_ptr<MuknoPlannerMainWindow>		mpMasterWindow;
+
+			// Handlers of the different layouts/Widgets        
+			std::unique_ptr<HandlerTextEditLog>			mpHandlerLog;
+			std::unique_ptr<QtLogWrapper>				mpWrapperLog;
+		};
+
+	}
 }

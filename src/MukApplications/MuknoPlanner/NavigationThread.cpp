@@ -19,6 +19,7 @@
 
 #include "MukQt/muk_qt_tools.h"
 #include "MukQt/MuknoPlannerMainWindow.h"
+#include "MukQt/SurgeonViewNavigation.h"
 
 #include "MukVisualization/muk_colors.h"
 #include "MukVisualization/VisScene.h"
@@ -97,12 +98,27 @@ namespace gris
       connect(tab, &TabNavigation::stopRequested,     &mWorkerInterface, &WorkerInterface::requestStop);
       connect(tab, &TabNavigation::startRequested,    &mWorkerInterface, &WorkerInterface::requestStart);
       connect(tab, &TabNavigation::calibrationRequested, &mWorkerInterface, &WorkerInterface::requestCalibration);
+
+	  connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::initRequested, this, &NavigationThread::init);
+	  connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyRunRequested, &mWorkerInterface, &WorkerInterface::requestStart);
+	  connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStopRequested, &mWorkerInterface, &WorkerInterface::requestStop);
+	  connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStepForwardRequested, &mWorkerInterface, &WorkerInterface::requestProceed);
+	  //connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStepBackwardsRequested, &WorkerInterface, &WorkerInterface::stepBackwards);
+	  connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyCalibrateRequested, &mWorkerInterface, &WorkerInterface::requestCalibration);
+
     }
 
     /**
     */
     void NavigationThread::setupConnections()
     {
+		connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::initRequested, this, &NavigationThread::init);
+		connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyRunRequested, &mWorkerInterface, &WorkerInterface::requestStart);
+		connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStopRequested, &mWorkerInterface, &WorkerInterface::requestStop);
+		connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStepForwardRequested, &mWorkerInterface, &WorkerInterface::requestProceed);
+		//connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyStepBackwardsRequested, &WorkerInterface, &WorkerInterface::stepBackwards);
+		connect(mpMainWindow->sWidgetNavigation, &SurgeonViewNavigation::dummyCalibrateRequested, &mWorkerInterface, &WorkerInterface::requestCalibration);
+
       // listening to changes of the pathCollection does not work :(
 
       // these should be automatically Queued Connections

@@ -85,7 +85,7 @@ namespace muk
       double angle = std::acos(std::abs(mCenter.tangent.z()));
       if (mCenter.tangent.z() < 0)
       {
-        angle = M_PI - angle;
+        angle = M_Pi - angle;
       }
       auto axis  = cast(crossproduct);
       axis.normalize();

@@ -25,7 +25,7 @@ namespace gris
 
       public:
         void                        clear();
-        unsigned int				        addAlgorithm(const std::string& name);
+        unsigned int				addAlgorithm(const std::string& name);
         const AlgorithmWrapper&     getAlgorithm(unsigned int id) const;
         AlgorithmWrapper&           getAlgorithm(unsigned int id);
         void                        deleteAlgorithm(unsigned int id);

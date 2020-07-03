@@ -43,8 +43,8 @@ namespace muk
       void reset();
 
     public:
-      void                  setName(const std::string& name);
-      const std::string&    getName()                         const { return mSceneName; }
+      void					setName(const std::string& name);
+      const std::string&    getName()												 const { return mSceneName; }
       void                  setLocalBasePath(const std::string& basePath)                 { mLocalBasePath = basePath; }
       const std::string&    getLocalBasePath()                                    const   { return mLocalBasePath; }
       const IPathPlanner*   getPlanner()                                          const   { return mpPlanner.get(); }
@@ -83,16 +83,17 @@ namespace muk
     public:
       std::vector<std::string> getPathKeys()     const;
       std::vector<std::string> getObstacleKeys() const;
+	  std::vector<std::shared_ptr<MukObstacle>> getObstacles() const;
             
     private:
       std::string mSceneName;
       std::string mLocalBasePath;
 
-      std::shared_ptr<SystemCalibration>  mpSystemCalibration;
-      std::shared_ptr<ICollisionDetector> mpCollisionDetector;
-      std::unique_ptr<IPathPlanner>    mpPlanner;
-      std::unique_ptr<IPathOptimizer>     mpPruner;
-      std::unique_ptr<IInterpolator>   mpInterpolator;
+      std::shared_ptr<SystemCalibration>	mpSystemCalibration;
+      std::shared_ptr<ICollisionDetector>	mpCollisionDetector;
+      std::unique_ptr<IPathPlanner>			mpPlanner;
+      std::unique_ptr<IPathOptimizer>		mpPruner;
+      std::unique_ptr<IInterpolator>		mpInterpolator;
 
       // fix, for now just save the name!
       //std::shared_ptr<INavigator>      mpNavigator;

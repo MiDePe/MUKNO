@@ -27,10 +27,15 @@
 
 #include "MukQt/MukQToolBar.h"
 #include "MukQt/MukQMenuBar.h"
+#include "MukQt/ToolbarSurgeonModel.h"
 #include "MukQt/MuknoPlannerMainWindow.h"
 #include "MukQt/TabPlanning.h"
 
+#include "MukQt/SurgeonViewInput.h"
+
 #include <vtkMetaImageReader.h>
+#include <QElapsedTimer>
+
 
 #include <boost/filesystem.hpp>
 
@@ -42,6 +47,7 @@ namespace muk
   */
   void ToolBarController::setupConnnections()
   {
+	//DeveloperView
     connect(mpMainWindow->mToolBar, &MukQToolBar::focusClicked, this, &ToolBarController::focusOnDefault);
     connect(mpMainWindow->mToolBar, &MukQToolBar::focusOnWaypointClicked, this, &ToolBarController::focusOnWaypoint);
     connect(mpMainWindow->mToolBar, &MukQToolBar::createNewSceneClicked, this, &ToolBarController::clearScene);
@@ -50,6 +56,20 @@ namespace muk
     connect(mpMainWindow->mToolBar, &MukQToolBar::loadSegmentationFileClicked, this, &ToolBarController::loadSegmentation);
     connect(mpMainWindow->mToolBar, &MukQToolBar::loadObstacleFileClicked, this, &ToolBarController::loadObstacleFromFile);
     connect(mpMainWindow->mToolBar, &MukQToolBar::saveSceneClicked, this, &ToolBarController::saveScene);
+	connect(mpMainWindow->mToolBar, &MukQToolBar::switchViewClicked, this, &ToolBarController::switchToSurgeonsView);	
+	connect(mpMainWindow->mToolBar, &MukQToolBar::trailOldStarted, this, &ToolBarController::startTrail);
+	connect(mpMainWindow->mToolBar, &MukQToolBar::trailOldEnded, this, &ToolBarController::endTrailOldGUI);
+
+	//SurgeonView
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::switchToDeveloperViewClicked, this, &ToolBarController::switchToDeveloperView);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::showInputWidget, this, &ToolBarController::surgeonViewSwitchToInputWidget);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::showSegmentationWidget, this, &ToolBarController::surgeonViewSwitchToSegmentationWidget);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::showPlanningWidget, this, &ToolBarController::surgeonViewSwitchToPlanningWidget);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::showSelectionWidget, this, &ToolBarController::surgeonViewSwitchToSelectionWidget);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::showNavigationWidget, this, &ToolBarController::surgeonViewSwitchToNavigationWidget);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::trailStarted, this, &ToolBarController::startTrail);
+	connect(mpMainWindow->mToolBarSurgeon, &ToolbarSurgeonModel::trailEnded, this, &ToolBarController::endTrailNewGUI);
+
   }
 
   /**
@@ -64,6 +84,54 @@ namespace muk
   void ToolBarController::focusOnWaypoint()
   {
     mpModels->pVisModel->focusOnWaypoint();
+  }
+
+
+  void ToolBarController::startTrail()
+  {
+	  trailTimer.restart();
+	  
+  }
+
+
+  void ToolBarController::endTrailOldGUI() 
+  {
+	  endTrail("old GUI");
+  }
+
+
+  void ToolBarController::endTrailNewGUI()
+  {
+	  endTrail("new GUI");
+  }
+
+
+  void ToolBarController::endTrail(QString guiVersion)
+  {
+	  int time = trailTimer.elapsed();
+	  QDateTime timeStamp = QDateTime::currentDateTime();;
+
+	  QString output = "Trail time: ";
+	  output = output.append(QString::number(time));
+	  output = output.append(" ms \n");
+	  output = output.append(timeStamp.toString(Qt::ISODate));
+	  output = output.append("\n");
+	  output = output.append(guiVersion);
+
+
+	  //save file
+	  QString fileName = QFileDialog::getSaveFileName(mpMainWindow->mToolBarSurgeon, tr("Save Trail Data"), "", tr("Text Files (*.txt)"));
+	  if (fileName != "")
+	  {
+		  QFile file(QFileInfo(fileName).absoluteFilePath());
+		  if (file.open(QIODevice::WriteOnly))
+		  {
+			  QString text = output;
+			  QTextStream out(&file);
+			  out << text;
+			  file.close();
+		  }
+	  }
   }
 
   /**
@@ -108,6 +176,8 @@ namespace muk
     mpModels->pVisModel->render();
   }
 
+
+
   /**
   */
   void ToolBarController::loadCTFile(const std::string& filename)
@@ -123,6 +193,8 @@ namespace muk
     LOG_LINE << "Loaded CT-File " << filename;
   }
 
+
+
   /**
   */
   void ToolBarController::loadSegmentation(const std::string& filename)
@@ -137,6 +209,7 @@ namespace muk
     //mpModels->pCtVisModel->riskStructureDataLoaded();
     LOG_LINE << "Loaded Segmentation-File " << filename;
   }
+
 
   /**
   */
@@ -154,6 +227,7 @@ namespace muk
     mpControls->mpPropControl->initSceneWidget();
     emit this->sceneCleared();
   }
+
 
   /**
   */
@@ -175,5 +249,42 @@ namespace muk
     LOG_LINE << "saved scene to " << filename;
   }
 
+
+  void ToolBarController::switchToSurgeonsView()
+  {
+	  mpMainWindow->switchViews();
+	  mpControls->mpInteract->setInteraction("surgeon");
+  }
+
+  void ToolBarController::switchToDeveloperView()
+  {
+	  mpMainWindow->switchViews();
+	  mpControls->mpInteract->setInteraction("default");
+  }
+
+  void ToolBarController::surgeonViewSwitchToInputWidget()
+  {
+	  mpMainWindow->svSwitchToInputWidget();
+  }
+
+  void ToolBarController::surgeonViewSwitchToSegmentationWidget()
+  {
+	  mpMainWindow->svSwitchToSegmentationWidget();
+  }  
+  
+  void ToolBarController::surgeonViewSwitchToPlanningWidget()
+  {
+	  mpMainWindow->svSwitchToPlanningWidget();
+  }
+
+  void ToolBarController::surgeonViewSwitchToSelectionWidget()
+  {
+	  mpMainWindow->svSwitchToSelectionWidget();
+  }
+
+  void ToolBarController::surgeonViewSwitchToNavigationWidget()
+  {
+	  mpMainWindow->svSwitchToNavigationWidget();
+  }
 }
 }

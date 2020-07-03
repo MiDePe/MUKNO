@@ -47,14 +47,21 @@ namespace gris
         
         void colorPaths();
         void singlePathSelectionChanged(size_t i);
+		std::string getPathInformation(size_t idx);
         void highlightViaSpinBox(size_t i);
         void highlightLargestDistance();
         void highlightStraightesPath();
         void highlightSmallestGoalAngle();
         void highlightShortestPath();
-        void highlightLeastThickBone();
-        void highlightShortestAirHole();
-        void highlightSinglePath(int i);
+		void highlightLeastThickBone();
+		void highlightShortestAirHole();
+		void highlightSinglePath(int i);
+		std::array<double, 2>  findLargestDistance();
+		std::array<double, 2>  findStraightesPath();
+		std::array<double, 2>  findSmallestGoalAngle();
+		std::array<double, 2>  findShortestPath();
+
+
 
         void advancedOptionsWindow();
         void advancedOptionsEnlarge();

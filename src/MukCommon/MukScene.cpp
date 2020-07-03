@@ -128,6 +128,13 @@ namespace muk
     return keys;
   }
 
+  std::vector<std::shared_ptr<MukObstacle>> MukScene::getObstacles() const
+  {
+	  return mObstacles;
+  }
+  
+
+
   /**
   */
   PathCollection& MukScene::getPathCollection(const std::string& key)

@@ -7,6 +7,7 @@
 #include "VisualizationController.h"
 #include "InteractionController.h"
 #include "MenuBarController.h"
+#include "SurgeonViewInputController.h"
 
 #include "private/muk.pch"
 
@@ -123,6 +124,7 @@ namespace gris
       auto* pTabSelection = mpMainWindow->mpTabSelection;
       // when the load ct-file button is clicked and smth is loaded
       connect(mpControls->mpToolbar.get(), &ToolBarController::ctFileLoaded, this, &SelectionController::ctFileLoaded);
+	  //connect(mpControls->mpSVInputControl.get(), &SurgeonViewInputController::segmentationStarted, this, &SelectionController::ctFileLoaded);
       // when the clear scene button is clicked or the planning in the planning controller has changed the whole tab will be resettet
       connect(mpControls->mpToolbar.get(), &ToolBarController::sceneCleared, this, [=] { mActiveKey.clear();  resetTabSelection(); });
       connect(mpControls->mpPlanningController.get(), &PlanningController::planningChanged, this, &SelectionController::resetTabSelection);
@@ -130,7 +132,7 @@ namespace gris
       connect(mpControls->mpPropControl.get(), &PropertyController::activChanged, this, &SelectionController::recalculateModel);
       // when the tab switches the selection tab is reloaded (if it switched to the tab and an update is needed)
       connect(mpMainWindow->mpTabContainer, &QTabWidget::currentChanged, this, &SelectionController::updateSelectionTab);
-      
+
       connect(mpMainWindow->mToolBar, &MukQToolBar::pathAnalysisRequested, this, &SelectionController::quickPathAnalysis);
       //Connections for TabSelection
       {
@@ -159,7 +161,7 @@ namespace gris
         connect(pTabSelection, &TabSelection::cutOffDistanceChanged, this, &SelectionController::cutOffDistanceChanged);
         connect(pTabSelection, &TabSelection::asObstacleClicked, this, &SelectionController::setCanalAsObstacle);
         connect(pTabSelection, &TabSelection::fillCanalsClicked, this, &SelectionController::autoFillCanals);
-        // everything regarding the paretoFront
+        // everything regording the paretoFront
         connect(pTabSelection, &TabSelection::paretoFrontClicked, this, &SelectionController::showParetoFrontWindow);
         connect(pTabSelection, &TabSelection::requestParetoFrontReset, this, &SelectionController::resetParetoFront);
         //connect(pTabSelection, &TabSelection::paretoExitClicked, this, &SelectionController::exitParetoFrontWindow);
@@ -404,6 +406,45 @@ namespace gris
       mpModels->pSelectionModel->loadPath(idx);
     }
 
+	/**
+	*/
+	std::string SelectionController::getPathInformation(size_t idx)
+	{
+
+		std::stringstream result;
+
+
+		result << "path ID: " << std::to_string(idx) << "\n";
+
+		const auto& v1 = myModel->getDistances();
+		if (!v1.empty())
+		{
+			result << "  minimum distance:  " << v1[idx] << "\n";
+
+			const auto& v2 = myModel->getCurvatures();
+			result << "  sum of curvatures: " << v2[idx] << "\n";
+
+			const auto& v3 = myModel->getGoalAngles();
+			result << "  angle difference:  " << v3[idx] << "\n";
+
+			const auto& v4 = myModel->getLengths();
+			result << "  length:            " << v4[idx] << "\n";
+
+			if (mCTFileLoaded) {
+				const auto& v5 = myModel->getBoneThickness();
+				result << "  bone thickness:    " << v5[idx] << "\n";
+
+				const auto& v6 = myModel->getAirHoles();
+				result << "  longest airhole:   " << v6[idx] << "\n";
+			}
+
+		}
+		highlightSinglePath(idx);
+		mpModels->pSelectionModel->loadPath(idx);
+
+		return result.str();
+	}
+
     /**
     */
     void SelectionController::highlightLargestDistance()
@@ -426,6 +467,27 @@ namespace gris
       }
     }
 
+	std::array<double, 2>  SelectionController::findLargestDistance()
+	{
+		if (mActiveKey.empty() || mpModels->pAppModel->getScene()->getPathCollection(mActiveKey).getPaths().empty())
+		{
+			throw MUK_EXCEPTION_SIMPLE("The Path Collection is empty");
+		}
+		else
+		{
+			const auto& key = mpModels->pPlanningModel->getActivePathCollection();
+			const auto pVisColl = mpModels->pVisModel->getVisScene()->getPathCollection(key);
+			const auto N = pVisColl->numberOfPaths();
+			if (N == 0)
+				return{ 0,0 };
+
+			auto result = myModel->getCurrentBest();
+			LOG_LINE << "Largest minimum distance:: " << result.distance.second << " at index " << result.distance.first;
+			return{ (double)result.distance.first, (double)result.distance.second };
+		}
+	}
+
+
     /**
     */
     void SelectionController::highlightStraightesPath()
@@ -447,6 +509,28 @@ namespace gris
         highlightSinglePath(result.curvature.first);
       }
     }
+
+	/**
+	*/
+	std::array<double, 2>  SelectionController::findStraightesPath()
+	{
+		if (mActiveKey.empty() || mpModels->pAppModel->getScene()->getPathCollection(mActiveKey).getPaths().empty())
+		{
+			throw MUK_EXCEPTION_SIMPLE("The Path Collection is empty");
+		}
+		else
+		{
+			const auto& key = mpModels->pPlanningModel->getActivePathCollection();
+			const auto pVisColl = mpModels->pVisModel->getVisScene()->getPathCollection(key);
+			const auto N = pVisColl->numberOfPaths();
+			if (N == 0)
+				return{ 0, 0};
+
+			auto result = myModel->getCurrentBest();
+			LOG_LINE << "Minimum curvature:: " << result.curvature.second << " at index " << result.curvature.first;
+			return{ (double)result.curvature.first, (double)result.curvature.second };
+		}
+	}
 
     /**
     */
@@ -471,6 +555,30 @@ namespace gris
       }
     }
 
+
+	/**
+	*/
+	std::array<double, 2>  SelectionController::findSmallestGoalAngle()
+	{
+		if (mActiveKey.empty() || mpModels->pAppModel->getScene()->getPathCollection(mActiveKey).getPaths().empty())
+		{
+			throw MUK_EXCEPTION_SIMPLE("The Path Collection is empty");
+		}
+		else
+		{
+			const auto& key = mpModels->pPlanningModel->getActivePathCollection();
+			const auto pScene = mpModels->pAppModel->getScene();
+			const auto& paths = pScene->getPathCollection(key).getPaths();
+			const auto N = paths.size();
+			if (N == 0)
+				return{ 0,0 };
+
+			auto result = myModel->getCurrentBest();
+			LOG_LINE << "Minimum goal angle difference: " << result.angle.second << " at index " << result.angle.first;
+			return{ (double)result.angle.first, (double)result.angle.second };
+		}
+	}
+
     /**
     */
     void SelectionController::highlightShortestPath()
@@ -492,6 +600,31 @@ namespace gris
         highlightSinglePath(result.length.first);
       }
     }
+
+	/** same logic as highlightShortestPath, but returns path-id
+	*/
+
+	std::array<double, 2> SelectionController::findShortestPath()
+	{
+
+		if (mActiveKey.empty() || mpModels->pAppModel->getScene()->getPathCollection(mActiveKey).getPaths().empty())
+		{
+			throw MUK_EXCEPTION_SIMPLE("The Path Collection is empty");
+		}
+		else
+		{
+			const auto& key = mpModels->pPlanningModel->getActivePathCollection();
+			const auto pVisColl = mpModels->pVisModel->getVisScene()->getPathCollection(key);
+			const auto N = pVisColl->numberOfPaths();
+			if (N == 0)
+				return{ 0,0 };
+
+			auto result = myModel->getCurrentBest();
+			LOG_LINE << "Minimum path length: " << result.length.second << " at index " << result.length.first;
+			//return result.length.first;
+			return{(double) result.length.first, (double) result.length.second };
+		}
+	}
 
     /**
     */

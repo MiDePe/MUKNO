@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/thesis/SDK-gris/x64/release/GrisFramework-0.6.2/lib/cmake/GrisFramework-0.6/cmake/resource.rc.in
+C:/thesis/SDK-gris/x64/release/ITK-4.11_vtk7.1_gdcm/lib/cmake/ITK-4.11/UseITK.cmake
+C:/thesis/SDK-gris/x64/release/ITK-4.11_vtk7.1_gdcm/lib/cmake/ITK-4.11/itkImageIOFactoryRegisterManager.h.in
+C:/thesis/SDK-gris/x64/release/ITK-4.11_vtk7.1_gdcm/lib/cmake/ITK-4.11/itkTransformIOFactoryRegisterManager.h.in
+C:/thesis/SDK-gris/x64/release/VTK-7.1.1/lib/cmake/vtk-7.1/UseVTK.cmake
+C:/thesis/repo/MUKNO/src/MukCommon/CMakeLists.txt

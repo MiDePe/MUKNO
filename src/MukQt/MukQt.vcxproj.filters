@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukQt\MukQt_autogen\mocs_compilation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\AlgConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\AlgGraphicsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\AlgItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\AlgItemHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\AlgPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\BoxPlots.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\Cursor3DSynchronizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\DirectionInteractionStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MedicalMultiViewWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\muk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\muk_qt_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MuknoPlannerMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MukPlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MukQMenuBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MukQRightClickMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MukQToolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\MultipleDoubleVectorPlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\QuickPathAnalysisWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\QuickPlanningConfigurationWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\ParameterNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\ParetoFront.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\ParetoWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\ProblemDefinitionWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\PropertyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\VolumeWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SceneWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SliceWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SphereInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewPlanning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewSegmentation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\SurgeonViewNavigation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\TabImaging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\TabNavigation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\TabPlanning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\TabSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\ToolbarSurgeonModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukQt\VtkWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\private\DirectionInteractionStyle.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\private\ParameterNet.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\private\ParetoFront.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\private\SliceSynchronizer.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\private\SliceInteractorStyle.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\AlgConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\AlgGraphicsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\AlgItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\AlgItemHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\AlgPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\BoxPlots.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\Cursor3DSynchronizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MedicalMultiViewWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\muk_qt_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\muk_qt_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MuknoPlannerMainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MukPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MukQMenuBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MukQRightClickMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MukQToolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\MultipleDoubleVectorPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\ParetoWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\ProblemDefinitionWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\PropertyWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\QuickPathAnalysisWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\QuickPlanningConfigurationWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SphereInteraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SceneWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewPlanning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewSegmentation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SurgeonViewNavigation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\SliceWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\TabImaging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\TabNavigation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\TabPlanning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\TabSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\ToolbarSurgeonModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\VolumeWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukQt\VTKWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\repo\MUKNO\src\MukQt\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\thesis\repo\MUKNO\include\MukQt\private\muk.pch">
+      <Filter>Header Files\private</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukQt\resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B91584B3-1609-3B15-BF65-B42A0C25FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{2264B8B5-CEEB-3D67-BE09-A72C5D788801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB068447-E40E-3315-86BB-47FF2D613851}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

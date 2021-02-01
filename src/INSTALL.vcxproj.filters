@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\build\x64\release\MUKNO2-gris\CMakeFiles\3b9b0ac5a4862849bc231470468debed\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{619A61E2-EEB5-3956-A440-0B013515F437}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

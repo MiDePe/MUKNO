@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////
+
+Current ToDos:
+
+v Farbige Buttons
+v Path Widget erstellen
+v Exception Message verhindern
+v Button-Click: Property Window registriert Obstacle
+v (Button-Click: Zentrieren auf Obstacle)
+- Segmentierung: Output des Algorithmus anzeigen
+v automatisch R auf 3d-Widget wenn Scene geladen wird
+- PathPlannng: StartRegion und GoalRegion
+	Klick auf Button -> Doppelklick Object -> Drag&Drop für Ausrichtung -> Rechtsklick "Finish"
+- Rechtsklick 3D-View: reset Camera
+
+
+//////////////////////////////////////////////////
+
+VisObstacles über SurgeonViewProperties bearbeiten
+v Wer "hat" die visObstacles? mpModel, mpControl...
+	std::vector<std::shared_ptr<MukObstacle>> obstacles = pScene->getObstacles();
+	std::vector<std::shared_ptr<VisObstacle>> visObstacles = mpModels->pVisModel->getVisScene()->getObstacles();
+	
+- Wie werden Opacity und Visibility geändert?
+
+- Wie wird es momentan gehandelt?
+	-> SceneWidget, PropertyWidget
+
+
+VisObstacle laden
+Hinweise in ToolbarController::loadScene
+VisObstacle liegen in VisScene. Ansprechen über Obstacle Key.
+
+VisualizationController::
+      mpModels->pVisModel->addAbstractObject(pObj);
+      mpControls->mpPropControl->addAbstractObject(pObj->getName());
+      mpModels->pVisModel->render();

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukEvaluation\CollisionDetectionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukEvaluation\Experiment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukEvaluation\muk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukEvaluation\SegmentationEvaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukEvaluation\statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukEvaluation\CollisionDetectionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukEvaluation\Experiment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukEvaluation\muk_evaluation_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukEvaluation\SegmentationEvaluator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukEvaluation\statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\src\MukEvaluation\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\repo\MUKNO\src\MukEvaluation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\thesis\repo\MUKNO\include\MukEvaluation\private\muk.pch">
+      <Filter>Header Files\private</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukEvaluation\resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B91584B3-1609-3B15-BF65-B42A0C25FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{2264B8B5-CEEB-3D67-BE09-A72C5D788801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB068447-E40E-3315-86BB-47FF2D613851}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

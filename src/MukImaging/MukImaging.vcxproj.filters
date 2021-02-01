@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\muk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\muk_imaging_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\MukImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\MukImagingIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\PluginManagerImaging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukImaging\VoxelCoordinate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\muk_imaging_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\muk_imaging_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\MukImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\MukImagingIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\PluginManagerImaging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukImaging\VoxelCoordinate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\src\MukImaging\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\repo\MUKNO\src\MukImaging\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\thesis\repo\MUKNO\include\MukImaging\private\muk.pch">
+      <Filter>Header Files\private</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukImaging\resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B91584B3-1609-3B15-BF65-B42A0C25FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{2264B8B5-CEEB-3D67-BE09-A72C5D788801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB068447-E40E-3315-86BB-47FF2D613851}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

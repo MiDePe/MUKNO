@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukApplications\MuknoPlanner\MuknoPlanner_autogen\mocs_compilation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\MuknoPlanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\AppControllers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\AlgorithmController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\BaseController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\InteractionController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\MenuBarController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\NavigationThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\NavigationWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\PlanningController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\ProblemDefinitionController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\PropertyController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SafeApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SafeProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SelectionController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewInputController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewPlanningController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewSegmentationController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewSelectionController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonViewNavigationController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\ToolBarController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\VisualizationController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\DefaultInteraction3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurgeonInteraction3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\HandlerTextEditLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\IMukInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\MultiPortSphereRegionInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\PlaneRegionInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\RegionMarker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SphereRegionInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurfaceCutter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\SurfaceRegionInteraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\DefaultInteraction3D.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\SurgeonInteraction3D.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\HandlerTextEditLog.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\IMukInteraction.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\PlaneRegionInteraction.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\RegionMarker.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\RegisterQtMetaTypes.hxx">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\SphereRegionInteraction.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\SurfaceRegionInteraction.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\MultiPortSphereRegionInteraction.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\SurfaceCutter.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\AppControllers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\AlgorithmController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\BaseController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\InteractionController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\MenuBarController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\MuknoPlanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\NavigationThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\NavigationWorker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\PlanningController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\ProblemDefinitionController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\PropertyController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SafeApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SafeProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SelectionController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewInputController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewPlanningController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewSegmentationController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewSelectionController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\SurgeonViewNavigationController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\ThreadedController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\ToolBarController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\VisualizationController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\repo\MUKNO\src\MukApplications\MuknoPlanner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\thesis\repo\MUKNO\include\MukApplications\MuknoPlanner\private\muk.pch">
+      <Filter>Header Files\private</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukApplications\MuknoPlanner\resource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B91584B3-1609-3B15-BF65-B42A0C25FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{2264B8B5-CEEB-3D67-BE09-A72C5D788801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB068447-E40E-3315-86BB-47FF2D613851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{9FCF7155-E60D-30F0-9AFF-460F402659D3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

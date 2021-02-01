@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\BezierSpiralInterpolator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\BezierSpline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PluginManagerPP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\InterpolatorBezierSpirals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\InterpolatorBezierToCircularArcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\InterpolatorLinear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\InterpolatorSpiralsYangEtAl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\OmplPlanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PlannerLinear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PlannerManualLinear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PlannerSplineBasedRRT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PlannerSplineBasedRRTconnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PrunerDummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\PrunerYangSpiral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\ValidityCheckerKdTreeNearestNeighbor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\BezierSpiral3DInterpolator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\BezierToArcTrajectory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\IStateValidityChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\Motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\muk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\MukGoalStates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\MukOmplSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\pathplanning_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\QuickPlanningConfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\SplineBasedRRT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\SplineBasedRRTconnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\StateSamplerBiasedGreedy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\StateSamplerIBounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\BezierSpiral3DInterpolator.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\IStateValidityChecker.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\magic_numbers.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\Motion.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\MotionValidatorDefault.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\MukGoalStates.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\MukOmplSetup.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\pathplanning_tools.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\PlannerStatistic.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\SplineBasedRRT.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\SplineBasedRRTconnect.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\StateSamplerBiasedGreedy.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\StateSamplerIBounds.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\types.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\ValidityCheckerDefault.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\ValidityCheckerKdTreeNearestNeighbor.h">
+      <Filter>Header Files\private</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\BezierSpiralInterpolator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\BezierSpline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\BezierToArcTrajectory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\muk_pathplanning_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\InterpolatorBezierSpirals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\InterpolatorBezierToCircularArcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\InterpolatorLinear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\InterpolatorSpiralsYangEtAl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\OmplPlanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PlannerLinear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PlannerManualLinear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PlannerSplineBasedRRT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PlannerSplineBasedRRTconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PluginManagerPP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PrunerDummy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\PrunerYangSpiral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\QuickPlanningConfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\thesis\repo\MUKNO\src\MukPathPlanning\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\thesis\repo\MUKNO\include\MukPathPlanning\private\muk.pch">
+      <Filter>Header Files\private</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\thesis\build\x64\release\MUKNO2-gris\src\MukPathPlanning\resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B91584B3-1609-3B15-BF65-B42A0C25FA4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\private">
+      <UniqueIdentifier>{2264B8B5-CEEB-3D67-BE09-A72C5D788801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB068447-E40E-3315-86BB-47FF2D613851}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

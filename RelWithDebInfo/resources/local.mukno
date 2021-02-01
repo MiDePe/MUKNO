@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Mukno>
+	<LocalEnvironment>
+		<RawDataPath>../</RawDataPath>
+		<Filename>../resources/local.mukno</Filename>
+		<LastScenes>
+			<Scene>..\resources\emptyScene.mukscene</Scene>
+			<Scene>C:/thesis/build/x64/release/MUKNO2-gris/RelWithDebInfo/results/thesis/2020-01-21-meeting/Scenes/emptyScene.mukscene</Scene>
+			<Scene>C:/thesis/build/x64/release/MUKNO2-gris/RelWithDebInfo/resources/emptyScene.mukscene</Scene>
+			<Scene>C:\thesis\build\x64\release\MUKNO2-gris\RelWithDebInfo\results\thesis\2020-01-21-meeting\Scenes\emptyScene.mukscene</Scene>
+			<Scene>C:\thesis\build\x64\release\MUKNO2-gris\RelWithDebInfo\results\thesis\2020-01-21-meeting\Scenes\P01-scene.mukscene</Scene>
+			<Scene>C:/thesis/build/x64/release/MUKNO2-gris/RelWithDebInfo/results/thesis/2020-01-21-meeting/Scenes/P01-scene.mukscene</Scene>
+		</LastScenes>
+	</LocalEnvironment>
+</Mukno>

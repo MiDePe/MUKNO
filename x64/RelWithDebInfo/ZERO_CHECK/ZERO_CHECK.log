@@ -1,0 +1,18 @@
+﻿  Checking Build System
+  CMake is re-running because C:/thesis/build/x64/release/MUKNO2-gris/src/MukApplications/MuknoPlanner/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/thesis/repo/MUKNO/src/MukApplications/MuknoPlanner/CMakeLists.txt'
+    is newer than 'C:/thesis/build/x64/release/MUKNO2-gris/src/MukApplications/MuknoPlanner/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version  to target Windows 10.0.18363.
+  -- Build type: Release
+  -- USING CXXFLAGS = '/DWIN32 /D_WINDOWS /W3 /GR /EHsc -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS /fp:strict /fp:except- /wd4503 /bigobj /MD /O2 /Ob2 /DNDEBUG'
+  -- USING EXEFLAGS = '/machine:x64 /INCREMENTAL:NO'
+  -- Targetting Visual Studio 14 2015
+  -- Target build enviroment supports auto-linking
+  -- Using VC14 compiler.
+  -- Generator uses intermediate configuration directory: $(Configuration)
+  -- Requested component: MPFR
+  -- Requested component: GMP
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/thesis/build/x64/release/MUKNO2-gris
